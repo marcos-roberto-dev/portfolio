@@ -1,16 +1,13 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+const profileName = "Marcos Roberto"
+const profileDescription = "Front-End Developer | Educator <br/> A passionate developer who loves to create new interfaces and experiences."
+
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
+    <h1 class="green">{{ profileName }}</h1>
+    <h3 v-html="profileDescription">
     </h3>
   </div>
 </template>
@@ -27,9 +24,18 @@ h3 {
   font-size: 1.2rem;
 }
 
+h4 {
+  display: flex;
+}
+
+span {
+  display: flex;
+  flex-wrap: wrap;
+}
 .greetings h1,
 .greetings h3 {
   text-align: center;
+  max-width: 366px;
 }
 
 @media (min-width: 1024px) {
